@@ -34,7 +34,7 @@ class SearchLibraryTest {
 
     // Invalid Search inputs
     @Test
-    void shouldReturnEmptyHashSet_when_SearchInputLessThen2Chars() {
+    void should_ReturnEmptyHashSet_when_SearchInputLessThen2Chars() {
         when(bookLibrary.getBooksFromLibrary()).thenReturn(books);
 
         HashSet<Book> expected = new HashSet<>();
@@ -45,7 +45,7 @@ class SearchLibraryTest {
     }
 
     @Test
-    void shouldReturnEmptyHashSet_when_InvalidSearchInput() {
+    void should_ReturnEmptyHashSet_when_InvalidSearchInput() {
         when(bookLibrary.getBooksFromLibrary()).thenReturn(books);
 
         HashSet<Book> expected = new HashSet<>();
@@ -57,7 +57,7 @@ class SearchLibraryTest {
 
     // Search for genre
     @Test
-    void shouldReturnBooks_when_GenreAsSearchWord() {
+    void should_ReturnBooks_when_GenreAsSearchWord() {
         when(bookLibrary.getBooksFromLibrary()).thenReturn(books);
 
         HashSet<Book> expected = new HashSet<>();
@@ -71,7 +71,7 @@ class SearchLibraryTest {
 
     // Search for Title
     @Test
-    void shouldReturnBooks_when_TitleAsSearchWord() {
+    void should_ReturnBooks_when_TitleAsSearchWord() {
         when(bookLibrary.getBooksFromLibrary()).thenReturn(books);
 
         HashSet<Book> expected = new HashSet<>();
@@ -85,7 +85,7 @@ class SearchLibraryTest {
 
     // Search for Author
     @Test
-    void shouldReturnBooks_when_AuthorFirstNameAsSearchWord() {
+    void should_ReturnBooks_when_AuthorFirstNameAsSearchWord() {
         when(bookLibrary.getBooksFromLibrary()).thenReturn(books);
 
         HashSet<Book> expected = new HashSet<>();
@@ -97,7 +97,7 @@ class SearchLibraryTest {
     }
 
     @Test
-    void shouldReturnBooks_when_AuthorLastNameAsSearchWord() {
+    void should_ReturnBooks_when_AuthorLastNameAsSearchWord() {
         when(bookLibrary.getBooksFromLibrary()).thenReturn(books);
 
         HashSet<Book> expected = new HashSet<>();
@@ -110,7 +110,7 @@ class SearchLibraryTest {
 
     // Search for release date
     @Test
-    void shouldReturnBooks_when_ReleaseYearAsSearchWord() {
+    void should_ReturnBooks_when_ReleaseYearAsSearchWord() {
         when(bookLibrary.getBooksFromLibrary()).thenReturn(books);
 
         HashSet<Book> expected = new HashSet<>();
@@ -122,7 +122,7 @@ class SearchLibraryTest {
     }
 
     @Test
-    void shouldReturnBooks_when_ReleaseDateAsSearchWord() {
+    void should_ReturnBooks_when_ReleaseDateAsSearchWord() {
         when(bookLibrary.getBooksFromLibrary()).thenReturn(books);
 
         HashSet<Book> expected = new HashSet<>();
@@ -134,7 +134,7 @@ class SearchLibraryTest {
     }
 
     @Test
-    void shouldReturnBooks_when_PartReleaseDateAsSearchWord() {
+    void should_ReturnBooks_when_PartReleaseDateAsSearchWord() {
         when(bookLibrary.getBooksFromLibrary()).thenReturn(books);
 
         HashSet<Book> expected = new HashSet<>();
@@ -149,7 +149,7 @@ class SearchLibraryTest {
 
     // Search for books with the highest grade
     @Test
-    void shouldReturnBooks_when_SearchForHighestGrade() {
+    void should_ReturnBooks_when_SearchForHighestGrade() {
         when(bookLibrary.getBooksFromLibrary()).thenReturn(books);
 
         ArrayList<Integer> topGrades = new ArrayList<>();

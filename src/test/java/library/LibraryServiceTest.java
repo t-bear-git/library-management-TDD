@@ -34,37 +34,37 @@ class LibraryServiceTest {
     }
 
     @Test
-    public void shouldReturnEmptyLibrary() {
+    public void should_ReturnEmptyLibrary() {
         library.removeBook(book1);
         library.removeBook(book2);
         assertEquals(0, library.getBooks().size());
     }
 
     @Test
-    public void shouldReturn3BooksWhen1AddedToLibrary() {
+    public void should_Return3BooksWhen1AddedToLibrary() {
         library.addBook(new Book("Harry Potter", "J.K Rowlings", "Fantasy", "2000", false, null, null));
         assertEquals(3, library.getBooks().size());
     }
 
     @Test
-    public void shouldReturn2BooksWhenLibraryIsUnchanged() {
+    public void should_Return2BooksWhenLibraryIsUnchanged() {
         assertEquals(2, library.getBooks().size());
     }
 
     @Test
-    public void shouldReturn1BookWhen1RemovedFromLibrary() {
+    public void should_Return1BookWhen1RemovedFromLibrary() {
         library.removeBook(book1);
         assertEquals(1, library.getBooks().size());
     }
 
     @Test
-    public void shouldReturnTrueWhenBookIsCheckedOut() {
+    public void should_ReturnTrueWhenBookIsCheckedOut() {
         library.checkOut(book1, lender1);
         assertTrue(book1.isCheckedOut());
     }
 
     @Test
-    public void shouldReturnFalseWhenBookIsCheckedIn() {
+    public void should_ReturnFalseWhenBookIsCheckedIn() {
         library.checkOut(book1, lender2);
         System.out.println(book1.isCheckedOut());
         library.checkIn(book1);
@@ -72,7 +72,7 @@ class LibraryServiceTest {
     }
 
     @Test
-    public void shouldReturnAllBooksNotCheckedOut() {
+    public void should_ReturnAllBooksNotCheckedOut() {
         ArrayList<Book> testBooks = library.getAvailableBooks();
         for (Book aBook : testBooks) {
             System.out.println(aBook.getTitle());
@@ -81,14 +81,14 @@ class LibraryServiceTest {
     }
 
     @Test
-    public void shouldReturn1BookWhen1IsCheckedOut() {
+    public void should_Return1BookWhen1IsCheckedOut() {
         library.checkOut(book2, lender1);
         ArrayList<Book> testBooks = library.getAvailableBooks();
         assertEquals(1, testBooks.size());
     }
 
     @Test
-    public void shouldReturn0BooksWhen2IsCheckedOut() {
+    public void should_Return0BooksWhen2IsCheckedOut() {
         library.checkOut(book2, lender1);
         library.checkOut(book1, lender1);
         ArrayList<Book> testBooks = library.getAvailableBooks();
@@ -96,7 +96,7 @@ class LibraryServiceTest {
     }
 
     @Test
-    public void shouldReturn1BookWhen1IsCheckedBackIn() {
+    public void should_Return1BookWhen1IsCheckedBackIn() {
         library.checkOut(book2, lender1);
         library.checkOut(book1, lender1);
         library.checkIn(book1);
@@ -105,7 +105,7 @@ class LibraryServiceTest {
     }
 
     @Test
-    public void shouldReturn2BooksWhen2IsCheckedBackIn() {
+    public void should_Return2BooksWhen2IsCheckedBackIn() {
         library.checkOut(book2, lender1);
         library.checkOut(book1, lender1);
         library.checkIn(book1);
@@ -117,7 +117,7 @@ class LibraryServiceTest {
 
     @DisplayName("Adding 1 comment")
     @Test
-    public void shouldAdd1CommentToBook() {
+    public void should_Add1CommentToBook() {
         String comment = "Torr och Tråkig bok. Rekommenderas ej.";
         library.addCommentToBook(book1, comment);
 
@@ -131,7 +131,7 @@ class LibraryServiceTest {
 
     @DisplayName("Adding 2 comments")
     @Test
-    public void shouldAddAnotherCommentToBook() {
+    public void should_AddAnotherCommentToBook() {
 
         String firstComment = "Torr och Tråkig bok. Rekommenderas ej.";
         String secondComment = "Helt okej bok. Trög start men blir bättre efterhand.";
@@ -150,7 +150,7 @@ class LibraryServiceTest {
 
     @DisplayName("Adding grade to book")
     @Test
-    public void shouldAddGradeToBook() {
+    public void should_AddGradeToBook() {
         int grade = 2;
         ArrayList<Integer> bookGrades = new ArrayList<>();
         bookGrades.add(grade);
@@ -163,7 +163,7 @@ class LibraryServiceTest {
 
     @DisplayName("Adding more grades to book")
     @Test
-    public void shouldAddMoreGradesToBook() {
+    public void should_AddMoreGradesToBook() {
         int grade1 = 2;
         int grade2 = 1;
         int grade3 = 5;
